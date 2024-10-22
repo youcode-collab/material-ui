@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Material UI</title>
+	<link rel="stylesheet" href="assets\css\button.css">
+	<style>
+		body {
+		  font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+		  color: #fff;
+		  padding: 50px;
+		  margin: 0 auto;
+		  background-color: #374954;
+		}
+
+		h1 {
+		  font-size: 32px;
+		  text-align: center;
+		  display: block;
+		  position: relative;
+		  z-index: 1;
+		}
+
+		h1:before {
+		  border-top: 3px solid #dfdfdf;
+		  content: "";
+		  margin: 0 auto;
+		  position: absolute;
+		  top: 50%;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  z-index: -1;
+		}
+
+		span {
+		  background: #374954;
+		  padding: 0 15px;
+		}
+
+		a {
+		  color: #fff;
+		}
+
+		button {
+		  background-color: #6BBE70;
+		  width: 200px;
+		  border: 0;
+		  padding: 10px 0;
+		  margin: 5px 0;
+		  text-align: center;
+		  color: #fff;
+		  font-weight: bold;
+		  cursor: pointer;
+		  -webkit-transition: background-color 0.3s ease;
+		  transition: background-color 0.3s ease;
+		}
+
+		button:hover {
+		  background-color: #6BBE92;
+		}
+
+		.scroll-container {
+		  width: 100%;
+		  overflow-x: hidden;
+		}
+
+		.horizontal-list {
+		  display: flex;
+		  list-style-type: none;
+		  padding: 0;
+		  margin: 0;
+		  overflow-x: auto;
+		  white-space: nowrap;
+		  scrollbar-width: none;
+		}
+
+		.horizontal-list::-webkit-scrollbar {
+		  display: none;
+		}
+
+		.horizontal-list li {
+		  display: inline-block;
+		  padding: 10px;
+		  margin-right: 10px;
+		  border-radius: 5px;
+		  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+		  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+		}
+
+		.container {
+		  display: -webkit-box;
+		  display: -webkit-flex;
+		  display: -ms-flexbox;
+		  display: flex;
+		  -webkit-flex-direction: row;
+		  flex-direction: row;
+		  -webkit-flex-wrap: wrap;
+		  flex-wrap: wrap;
+		}
+
+		.item {
+		  background-color: #4F6877;
+		  margin: 0 10px 10px 0;
+		  display: inherit;
+		  overflow: hidden;
+		  padding: 10px;
+		  -webkit-box-pack: center;
+		  -webkit-justify-content: center;
+		  justify-content: center;
+		  -webkit-align-items: center;
+		  align-items: center;
+		}
+
+		.box {
+		  width: 300px;
+		  height: 100px;
+		  background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1><span>Materials</span></h1>
+		<nav class="scroll-container">
+			<ul class="horizontal-list">
+				<li><a href="#app-bars-section">App bars</a></li>
+				<li><a href="#badge-section">Badge</a></li>
+				<li><a href="#buttons-section">Buttons</a></li>
+				<li><a href="#cards-section">Cards</a></li>
+				<li><a href="#carousel-section">Carousel</a></li>
+				<li><a href="#checkbox-section">Checkbox</a></li>
+				<li><a href="#checkbox-section">Chips</a></li>
+				<li><a href="#date-pickers-section">Date pickers</a></li>
+				<li><a href="#dialogs-section">Dialogs</a></li>
+				<li><a href="#divider-section">Divider</a></li>
+				<li><a href="#lists-section">Lists</a></li>
+				<li><a href="#menus-section">Menus</a></li>
+				<li><a href="#radio-button-section">Radio button</a></li>
+				<li><a href="#search-section">Search</a></li>
+				<li><a href="#sheets-section">Sheets</a></li>
+				<li><a href="#sliders-section">Sliders</a></li>
+				<li><a href="#snackbar-section">Snackbar</a></li>
+				<li><a href="#switch-section">Switch</a></li>
+				<li><a href="#tabs-section">Tabs</a></li>
+				<li><a href="#text-fields-section">Text fields</a></li>
+				<li><a href="#time-pickers-section">Time pickers</a></li>
+				<li><a href="#tooltips-section">Tooltips</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="buttons-section">
+		<h1 class="title"><span>Buttons</span></h1>
+		<p>Buttons communicate actions that users can take. They are typically placed throughout your UI.</p>
+	    
+	    <h2>Filled Button</h2>
+	    <p>The filled button’s contrasting surface color makes it the most prominent button after the FAB. It’s used for final or unblocking actions in a flow.</p>
+
+		<div class="container">
+			<div class="item"><div class="box"></div></div>
+			<div class="item"><div class="box"></div></div>
+			<div class="item"><div class="box"></div></div>
+		</div>
+
+		<h2>Outlined Button</h2>
+		<p>Use an outlined button for actions that need attention but aren’t the primary action, such as See all or Add to cart. This is also the button to use for giving someone the opportunity to change their mind or escape a flow.</p>
+		<div class="container">
+			<div class="item"><div class="box"></div></div>
+			<div class="item"><div class="box"></div></div>
+			<div class="item"><div class="box"></div></div>
+		</div>
+
+		<h2>Elevated Button</h2>
+		<p>Elevated buttons are essentially filled buttons with a lighter background color and a shadow. To prevent shadow creep, only use them when absolutely necessary, such as when the button requires visual separation from a patterned background.</p>
+		<div class="container">
+			<div class="item"><div class="box"></div></div>
+			<div class="item"><div class="box"></div></div>
+			<div class="item"><div class="box"></div></div>
+		</div>
+
+		<h2>Icon button</h2>
+		<p>The most compact and subtle type of button, icon buttons are used for optional supplementary actions such as “Bookmark” or “Star.”</p>
+		<div class="container">
+			<div class="item"><div class="box"></div></div>
+			<div class="item"><div class="box"></div></div>
+			<div class="item"><div class="box"></div></div>
+		</div>
+	</section>
+
+	<footer>
+		<p>&copy; 2024 Youcode - <a href="https://github.com/Youcode-Classe-E-2024-2025" target="blank">Enigma</a></p>
+	</footer>
+</body>
+</html>
